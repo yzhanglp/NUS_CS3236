@@ -2,9 +2,9 @@
 </br>
 <center><a href="yzhanglp.com" title="personal website">ZHANG Yuhao</a></center>
 
-#L1 Measure
+# Lecture 1 Measure
 Link to [Lecture Notes 1](../materials/01-Measures.pdf)
-##Definition & Property
+## Definition & Property
 - To measure the information quantity of a event, we should define a measure to measure the information quantity we get if a event happened.
 - Generically speaking, if A occurs with probability p, then we define:
   $$Information(A)=\psi(p)$$
@@ -58,7 +58,7 @@ Some natural properties that a mesure $\psi(p)$ should have:
 - In the last term, $H(Y|X=x)=\sum_{y}P_{Y|X}(y|x)\log_{2}\frac{1}{P_{Y|X}(y|x)}$.
 - Intuition: Noticed that $H(Y|X=x)$ is the entropy of Y given a certain X. The Conditional Entropy only do averge on all the $X\sim{x}$. Thus the Conditional Entropy represent the uncertainty of $Y$ after observing $X$. 
 
-##Property of Entropy
+## Property of Entropy
 - **Non-negativity:** $$H(X)\ge{0}$$
 
 - **Upper bound:** If $X$ takes values on a finite alphabet $\chi$, then:
@@ -78,4 +78,4 @@ Proof: Use the expansion: $$P_{X_1,...,X_n} = P_{X_1}\times{P_{X_2|X_1}}\times{P
 - **Sub-additivity:**
 $$H(X_1,...X_n)\leq{\sum_{i=1}^{n}H(X_i)}$$
 
-##KL Divergence
+## KL Divergence
