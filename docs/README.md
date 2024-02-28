@@ -1,6 +1,6 @@
 <center><font face="font" size=6>CS3226 Notes</font></center>
-</br>
-<center><a href="yzhanglp.com" title="personal website">ZHANG Yuhao</a></center>
+</br>  
+<center><a href="https://yzhanglp.com" title="personal website">ZHANG Yuhao</a></center>
 
 # Lecture 1 Measure
 Link to [Lecture Notes 1](../materials/01-Measures.pdf)
@@ -26,8 +26,8 @@ Some natural properties that a mesure $\psi(p)$ should have:
  ## Information of Random Varible - Entropy
  ### Definition
  - Let $X$ be a discrete random varible with probability mass function $P_X$
- - We define (Shannon) entropy as the Following:
-  $$\begin{align*}
+ - We define (Shannon) entropy as the Following:    
+ $$\begin{align*}
  H(X) &= E_{X{\sim}x}[\log_{2}\frac{1}{P_{X}(X)}] \\
  &= \sum_{x}P_{X}(x)log_{2}\frac{1}{P_{X}(x)}
 \end{align*}$$
@@ -43,14 +43,14 @@ Some natural properties that a mesure $\psi(p)$ should have:
   
 ### Variations
 **Joint entropy of two random varibles $(X,Y)$**: 
-    $$\begin{align*}
+ $$\begin{align*}
  H(X,Y) &= E_{(X,Y){\sim}P_{XY}}[\log_{2}\frac{1}{P_{XY}(X,Y)}] \\
  &= \sum_{x,y}P_{XY}(x,y)log_{2}\frac{1}{P_{XY}(x,y)}
  \end{align*}$$
 - Intuition:Just treat $(X,Y)$ as a RV and use the definition
 
 **Condition entropy of Y given X:**
-  $$\begin{align*} H(X|Y) &=E_{(X,Y){\sim}P_{XY}}[\log_{2}\frac{1}{P_{Y|X}}(Y|X)]\\
+ $$\begin{align*} H(X|Y) &=E_{(X,Y){\sim}P_{XY}}[\log_{2}\frac{1}{P_{Y|X}}(Y|X)]\\
   & = \sum_{x,y}P_{XY}(x,y)log_{2}\frac{1}{P_{Y|X}{(y|x)}}\\
   & = \sum_{x}P_{X}(x)H(Y|X=x)
   \end{align*}$$
@@ -62,20 +62,21 @@ Some natural properties that a mesure $\psi(p)$ should have:
 - **Non-negativity:** $$H(X)\ge{0}$$
 
 - **Upper bound:** If $X$ takes values on a finite alphabet $\chi$, then:
-  $$H(X)\leq{log_2{\chi}}$$
+ $$H(X)\leq{log_2{\chi}}$$
   Intuition: The uniform distribution has most uncertainty
   Proof: to be add
   Intuition of proof: Use a unform distributed $Q$
 
 - **Chain rule:**
-  $$H(X,Y)=H(X)+H(Y|X)$$
+ $$H(X,Y)=H(X)+H(Y|X)$$
   Intuition: The overall information $(X,Y)$ is the information in X plus the remaining information in Y after observeing X.
 Proof: to be add.
 
 - **Chain rule:(general):**
-$$H(X_{1},...,X_{n})=\sum_{i=1}^{n}H(X_{i}|X_1,...,X_{i-1})$$
-Proof: Use the expansion: $$P_{X_1,...,X_n} = P_{X_1}\times{P_{X_2|X_1}}\times{P_{X_3|X_1,X_2}}\times...\times{P_{X_{n}|X_1,...,X_{n-1}}}$$
+ $$H(X_{1},...,X_{n})=\sum_{i=1}^{n}H(X_{i}|X_1,...,X_{i-1})$$
+Proof: Use the expansion: 
+ $$P_{X_1,...,X_n} = P_{X_1}\times{P_{X_2|X_1}}\times{P_{X_3|X_1,X_2}}\times...\times{P_{X_{n}|X_1,...,X_{n-1}}}$$
 - **Sub-additivity:**
-$$H(X_1,...X_n)\leq{\sum_{i=1}^{n}H(X_i)}$$
+ $$H(X_1,...X_n)\leq{\sum_{i=1}^{n}H(X_i)}$$
 
 ## KL Divergence
