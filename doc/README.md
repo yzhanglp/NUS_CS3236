@@ -41,7 +41,7 @@ Some natural properties that a mesure $\psi(p)$ should have:
  - We can show that the entropy will have a max value at $p=\frac{1}{2}$
  - Can generlize to uniform distribution random varible.$H(X) = \log{(\left |M\right |)}$ with all event happened in probability $\frac{1}{\left |M\right |}$ (Also largest entropy with M events)
   
-###Variations
+### Variations
 **Joint entropy of two random varibles $(X,Y)$**: 
     $$\begin{align*}
  H(X,Y) &= E_{(X,Y){\sim}P_{XY}}[\log_{2}\frac{1}{P_{XY}(X,Y)}] \\
