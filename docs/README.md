@@ -79,4 +79,43 @@ Proof: Use the expansion:
 - **Sub-additivity:**
  $$H(X_1,...X_n)\leq{\sum_{i=1}^{n}H(X_i)}$$
 
-## KL Divergence
+## KL Divergence  
+### Definition:  
+ $$\begin{align*}
+D(P||Q) &= \sum_{x}P(x)log_{2}\frac{P(X)}{Q(X)}\\
+&=E_{X\sim{P}}[log_{2}\frac{P(X)}{Q(X)}]
+\end{align*}$$
+- Can be viewed as a kind of "distance" measure the Difference between P and Q, but not a distance function in mathematical sense.  
+- We can show $D(P||Q)$ always larger than 0 by use $\log{x}\leq{x-1}$  
+
+## Mutual Information
+### Definition
+- Mutual information:
+  $$I(X;Y)=H(Y)-H(X|Y)$$
+- Intuition:  
+  H(Y) is prior uncertainty in Y, H(Y|X) is the remaining uncertainty after observing X. Thus I(X;Y) is the amount about Y **We Learn** by **observing** X (on averge). Which stands for Mutual information between Y and X.  
+### Properties of Mutual Information  
+- Alternative forms:  
+$$\begin{align*}
+I(X;Y) &= D(P_{XY}||P_{X}\times{P_{Y}})\\
+&=E\left[log_{2}\frac{P_{XY}(X,Y)}{P_X(X)P_Y(Y)}\right ]\\
+&=E\left [log_{2}\frac{P_{Y|X}(Y|X)}{P_Y(Y)}\right ]\\
+&=\sum{x,y}P_{XY}(x,y)log_2\frac{P_{Y|X}(x,y)}{P_Y(y)}
+\end{align*}$$
+- Proof: just substitute $H(Y)$ and $H(Y|X)$ with the difintion of entropy  
+- Symmetry: We have:  
+$$ I(X;Y) = H(X)+H(Y)-H(X,Y) = I(Y;X)$$
+- Non-negativity
+- Upper bounds:
+  $$I(X;Y)\leq{H(X)}\leq{log_2|\chi|}$$
+  $$I(Y;X)\leq{H(Y)}\leq{log_2|\mathbb{Y}|}$$
+- Chain rule: Similar with Entropy term
+- Sub-additivity Similar with Entropy
+- Data processing inequality:  
+  Given X and Z are conditionally independent given Y then:
+  $$I(X;Z)\leq{I(X;Y)}$$
+- Intuition Processing Y to produce Z can not increase the information available regarding X.
+- Proof: Use $P_{Z|XY}=P_{Z|Y}$ and $H(X)-H(X|Z)\leq{H(X)-H(X|Y,z)}$
+
+## Conclusion  
+- The lecture 1 mainly give some basic difinition of information theory. Like Entropy, KL-Divergence, Mutual Information, they share some similar property and all use to measure the information quantity(uncertainty), the proof follows simply use the defintion and some basic equation.
